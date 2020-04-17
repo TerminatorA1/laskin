@@ -15,11 +15,12 @@ for(item of buttons){
             tulos.innerHTML = tulos.innerHTML.replace('.', ',')
         }
         else if(buttonText == "C"){
-            delete tulosValue[-1]
+            tulosValue = tulosValue.slice(0, -1);
             tulos.innerHTML = tulosValue
         }
         else if(buttonText == "="){
             tulos.innerHTML = eval(tulosValue)
+            tulosValue = eval(tulosValue)
             tulos.innerHTML = tulos.innerHTML.replace('.', ',')
         }else{
             tulosValue += buttonText
