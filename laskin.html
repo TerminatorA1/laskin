@@ -2,59 +2,69 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<script type="text/javascript" src="laskin.js">
+<script type="text/javascript" src="laskin.js" defer>
 </script>
-<script type="text/javascript" src="myCanvas.js">
-</script>
+<style>
+  #laskintable{
+    width: 400px;
+    height: 600px;
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  #laskintable td{
+    border: 2px solid black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    background-color: #fca429;
+  }
+  button{
+    width: 65px;
+    height: 65px;
+    border: 2px solid #d1d1d1;
+    background-color: #ffffff;
+    font-size: large;
+  }
+  p {
+    font-size: large;
+  }
+</style>
 <title>Laskin</title>
 </head>
 <body>
-  <canvas id="myCanvas" width="720" height="900" style="border:3px solid #000000;">
-  </canvas>
-  <script>
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-ctx.moveTo(0, 150);
-ctx.lineTo(720, 150);
-ctx.stroke();
-ctx.moveTo(0, 300);
-ctx.lineTo(720, 300);
-ctx.stroke();
-ctx.moveTo(0, 450);
-ctx.lineTo(720, 450);
-ctx.stroke();
-ctx.moveTo(0, 600);
-ctx.lineTo(720, 600);
-ctx.stroke();
-ctx.moveTo(0, 750);
-ctx.lineTo(720, 750);
-ctx.stroke();
-ctx.moveTo(180, 150);
-ctx.lineTo(180, 750);
-ctx.stroke();
-ctx.moveTo(360, 150);
-ctx.lineTo(360, 900);
-ctx.stroke();
-ctx.moveTo(540, 150);
-ctx.lineTo(540, 900);
-ctx.stroke();
-</script>
-<button id="0" type="button">0</button>
-<button id="1" type="button">1</button>
-<button id="2" type="button">2</button>
-<button id="3" type="button">3</button>
-<button id="4" type="button">4</button>
-<button id="5" type="button">5</button>
-<button id="6" type="button">6</button>
-<button id="7" type="button">7</button>
-<button id="8" type="button">8</button>
-<button id="9" type="button">9</button>
-<button id="plus" type="button">+</button>
-<button id="minus" type="button">-</button>
-<button id="kerto" type="button">*</button>
-<button id="jako" type="button">/</button>
-<button id="reset" type="button">AC</button>
-<button id="poisto" type="button">C</button>
-<button id="pros" type="button">%</button>
-<button id="yhtSuuri" type="button">=</button>
-<button id="pilkku" type="button">,</button>
+<table id="laskintable">
+  <tr>
+    <td style="background-color: #ffffff;" colspan="4"><p id="tulos"></p></td>
+  </tr>
+  <tr>
+    <td><button id="reset" type="button">AC</button></td>
+    <td><button id="poisto" type="button">C</button></td>
+    <td><button id="pros" type="button">%</button></td>
+    <td><button id="jako" type="button">/</button></td>
+  </tr>
+  <tr>
+    <td><button id="7" type="button">7</button></td>
+    <td><button id="8" type="button">8</button></td>
+    <td><button id="9" type="button">9</button></td>
+    <td><button id="kerto" type="button">*</button></td>
+  </tr>
+  <tr>
+    <td><button id="4" type="button">4</button></td>
+    <td><button id="5" type="button">5</button></td>
+    <td><button id="6" type="button">6</button></td>
+    <td><button id="minus" type="button">-</button></td>
+  </tr>
+  <tr>
+    <td><button id="1" type="button">1</button></td>
+    <td><button id="2" type="button">2</button></td>
+    <td><button id="3" type="button">3</button></td>
+    <td><button id="plus" type="button">+</button></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button style="width: 130px;" id="0" type="button">0</button></td>
+    <td><button id="pilkku" type="button">,</button></td>
+    <td><button id="yhtSuuri" type="button">=</button></td>
+  </tr>
+</table>
+</body>
+</html>
